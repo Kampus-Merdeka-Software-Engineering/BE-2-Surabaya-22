@@ -9,6 +9,14 @@ async function getAllConsument() {
     }
 }
 
+async function createConsument(consument) {
+    try {
+        return await prisma.consument.create(consument);
+    } catch (err) {
+        throw err;
+    }
+}
+
 module.exports = {
     getAllConsument
 }
